@@ -1,0 +1,78 @@
+<style>
+  .button-icon {
+    font-family: "Material Icons";
+    background: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 4px;
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+  }
+
+  .button-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .button-icon:focus {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  ul {
+    display: none;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    background: white;
+    padding: 16px;
+    color: black;
+    margin: 0;
+  }
+
+  ul.active {
+    display: block;
+    position: fixed;
+    right: 0;
+  }
+
+  ul > li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 0px;
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+  }
+
+  ul.active > li::before {
+    content: "radio_button_unchecked";
+    font-family: "Material Icons";
+    margin-right: 4px;
+    font-size: 24px;
+  }
+
+  ul > li.selected::before {
+    content: "radio_button_checked";
+  }
+
+  ul > li::after {
+    content: "";
+    position: absolute;
+    left: -16px;
+    right: -16px;
+    top: 0;
+    bottom: 0;
+  }
+
+  ul > li:hover::after {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  ul > li:active::after {
+    background: rgba(0, 0, 0, 0.2);
+  }
+</style>
+<button class="button-icon"></button>
+<ul class="list"></ul>

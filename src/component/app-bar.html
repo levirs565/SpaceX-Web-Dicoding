@@ -1,0 +1,58 @@
+<style>
+  :host {
+    background: var(--color-1);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+    padding: 12px 0px;
+    margin: 0;
+  }
+
+  tabs-button {
+    flex-grow: 1;
+    margin-left: 16px;
+    align-self: stretch;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: end;
+  }
+
+  @media screen and (max-width: 800px) {
+    :host {
+      flex-wrap: wrap;
+    }
+    .right {
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    search-menu {
+      flex-grow: 1;
+    }
+
+    h1 {
+      flex-grow: 1;
+    }
+
+    tabs-button {
+      flex-grow: 0;
+    }
+  }
+</style>
+<h1>SpaceX Data</h1>
+<tabs-button id="tabs"></tabs-button>
+<div class="right">
+  <search-menu id="search"></search-menu>
+  <radio-menu icon="sort" id="radio-menu"> </radio-menu>
+</div>
